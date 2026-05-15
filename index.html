@@ -1,0 +1,712 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>No Stranger To Kindness — Rescuing Food, Feeding Hope</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Cursor glow -->
+  <div class="cursor-glow" id="cursorGlow"></div>
+
+  <!-- Navigation -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#" class="logo">
+        <svg class="logo-svg" width="44" height="44" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="50" cy="50" r="46" stroke="#E8734A" stroke-width="3" fill="none" opacity="0.3"/>
+          <circle cx="50" cy="50" r="38" stroke="#E8734A" stroke-width="2" fill="none" opacity="0.5"/>
+          <!-- Heart -->
+          <path d="M50 72 C50 72 28 56 28 42 C28 34 34 28 42 28 C46 28 49 30 50 33 C51 30 54 28 58 28 C66 28 72 34 72 42 C72 56 50 72 50 72Z" fill="#E8734A"/>
+          <!-- Fork left -->
+          <path d="M38 45 L38 62" stroke="white" stroke-width="2" stroke-linecap="round"/>
+          <path d="M35 45 L35 52" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+          <path d="M41 45 L41 52" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+          <!-- Spoon right -->
+          <ellipse cx="62" cy="48" rx="4" ry="5" stroke="white" stroke-width="1.8" fill="none"/>
+          <path d="M62 53 L62 62" stroke="white" stroke-width="2" stroke-linecap="round"/>
+          <!-- Plate arc beneath -->
+          <path d="M32 78 Q50 86 68 78" stroke="#F2A93B" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+          <path d="M36 82 Q50 88 64 82" stroke="#F2A93B" stroke-width="1.5" stroke-linecap="round" fill="none" opacity="0.5"/>
+        </svg>
+        <span class="logo-text">No <em>Stranger</em> To Kindness</span>
+      </a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#about">About</a></li>
+        <li><a href="#how-it-works">How It Works</a></li>
+        <li><a href="#impact">Impact</a></li>
+        <li><a href="#partners">Partners</a></li>
+        <li><a href="#volunteer">Get Involved</a></li>
+        <li><a href="#donate" class="btn btn-nav">Donate</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="hero" id="hero">
+    <div class="hero-bg">
+      <div class="hero-gradient"></div>
+      <div class="hero-grid-pattern"></div>
+      <div class="hero-orb orb-1"></div>
+      <div class="hero-orb orb-2"></div>
+      <div class="hero-orb orb-3"></div>
+    </div>
+    <div class="hero-particles" id="particles"></div>
+    <div class="hero-content">
+      <div class="hero-badge">
+        <span class="badge-dot"></span>
+        Rescuing food. Feeding hope.
+      </div>
+      <h1 class="hero-title">
+        <span class="title-line" data-delay="0">No</span>
+        <span class="title-line title-accent" data-delay="1"><em>Stranger</em></span>
+        <span class="title-line" data-delay="2">To Kindness</span>
+      </h1>
+      <p class="hero-description">
+        We connect restaurants and cafes with people experiencing homelessness,
+        turning surplus meals into moments of warmth and dignity.
+      </p>
+      <div class="hero-buttons">
+        <a href="#donate" class="btn btn-primary btn-lg btn-glow">
+          <span>Make a Donation</span>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+        <a href="#how-it-works" class="btn btn-outline btn-lg">See How It Works</a>
+      </div>
+    </div>
+    <div class="hero-stats-bar">
+      <div class="stat">
+        <span class="stat-number" data-target="52000">0</span>
+        <span class="stat-label">Meals Served</span>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat">
+        <span class="stat-number" data-target="185">0</span>
+        <span class="stat-label">Partner Venues</span>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat">
+        <span class="stat-number" data-target="12">0</span>
+        <span class="stat-label">Cities</span>
+      </div>
+    </div>
+    <div class="scroll-indicator">
+      <div class="scroll-mouse">
+        <div class="scroll-wheel"></div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Photo strip -->
+  <section class="photo-strip">
+    <div class="photo-track">
+      <div class="photo-card">
+        <div class="photo-placeholder" style="--hue: 15;">
+          <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" opacity="0.4"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>
+          <span>Volunteer delivery night</span>
+        </div>
+      </div>
+      <div class="photo-card">
+        <div class="photo-placeholder" style="--hue: 35;">
+          <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" opacity="0.4"><path d="M3 11l19-9-9 19-2-8-8-2z"/></svg>
+          <span>Kitchen prep with partners</span>
+        </div>
+      </div>
+      <div class="photo-card">
+        <div class="photo-placeholder" style="--hue: 140;">
+          <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" opacity="0.4"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          <span>Community meal sharing</span>
+        </div>
+      </div>
+      <div class="photo-card">
+        <div class="photo-placeholder" style="--hue: 200;">
+          <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" opacity="0.4"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+          <span>Warm meals, warm hearts</span>
+        </div>
+      </div>
+      <div class="photo-card">
+        <div class="photo-placeholder" style="--hue: 280;">
+          <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" opacity="0.4"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+          <span>Food rescue in action</span>
+        </div>
+      </div>
+      <div class="photo-card">
+        <div class="photo-placeholder" style="--hue: 50;">
+          <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" opacity="0.4"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg>
+          <span>Smiles at the shelter</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="section about" id="about">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-text reveal">
+          <span class="section-label">Our Story</span>
+          <h2>Because no one should be a <em>stranger</em> to a warm meal</h2>
+          <p class="lead">
+            Every night, restaurants and cafes discard tonnes of perfectly good food.
+            At the same time, thousands of people go to sleep hungry on our streets.
+          </p>
+          <p>
+            <strong>No Stranger To Kindness</strong> was founded to bridge that gap. We
+            partner with local eateries to rescue surplus food before it goes to waste
+            and deliver it — with care and dignity — to shelters, outreach centres, and
+            directly to people sleeping rough.
+          </p>
+          <p>
+            Our name carries a simple truth: kindness shouldn't be reserved for people
+            we know. Every stranger deserves compassion, and every meal shared is a
+            reminder that we're all connected.
+          </p>
+          <div class="about-signature">
+            <div class="signature-line"></div>
+            <span>Founded 2024 &bull; London, UK</span>
+          </div>
+        </div>
+        <div class="about-visual">
+          <div class="about-card card-1 reveal" data-delay="0">
+            <div class="card-glow"></div>
+            <div class="card-icon">
+              <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/><path d="M8 12l2 2 4-4"/></svg>
+            </div>
+            <h3>Zero Waste</h3>
+            <p>Surplus food rescued from landfill and given new purpose</p>
+            <div class="card-metric">
+              <span class="metric-value">23</span>
+              <span class="metric-unit">tonnes saved</span>
+            </div>
+          </div>
+          <div class="about-card card-2 reveal" data-delay="1">
+            <div class="card-glow"></div>
+            <div class="card-icon">
+              <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+            </div>
+            <h3>Full Dignity</h3>
+            <p>Quality meals served with warmth and respect</p>
+            <div class="card-metric">
+              <span class="metric-value">100%</span>
+              <span class="metric-unit">restaurant quality</span>
+            </div>
+          </div>
+          <div class="about-card card-3 reveal" data-delay="2">
+            <div class="card-glow"></div>
+            <div class="card-icon">
+              <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            </div>
+            <h3>Community</h3>
+            <p>Building bridges between businesses and those in need</p>
+            <div class="card-metric">
+              <span class="metric-value">430+</span>
+              <span class="metric-unit">volunteers</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How It Works -->
+  <section class="section how-it-works" id="how-it-works">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-label">The Process</span>
+        <h2>How It Works</h2>
+        <p>From kitchen to community in three simple steps</p>
+      </div>
+      <div class="steps-timeline">
+        <div class="timeline-line">
+          <div class="timeline-progress" id="timelineProgress"></div>
+        </div>
+        <div class="steps-grid">
+          <div class="step reveal" data-delay="0">
+            <div class="step-dot"></div>
+            <div class="step-content">
+              <div class="step-number">01</div>
+              <div class="step-icon-wrapper">
+                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>
+              </div>
+              <h3>Restaurants Alert Us</h3>
+              <p>
+                At the end of service, partner restaurants and cafes log their surplus
+                meals through our app. We know exactly what's available and when.
+              </p>
+            </div>
+          </div>
+          <div class="step reveal" data-delay="1">
+            <div class="step-dot"></div>
+            <div class="step-content">
+              <div class="step-number">02</div>
+              <div class="step-icon-wrapper">
+                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 3 20 16 16 16"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+              </div>
+              <h3>Volunteers Collect</h3>
+              <p>
+                Our network of dedicated volunteers picks up the food in insulated
+                bags, ensuring it stays fresh and safe during transport.
+              </p>
+            </div>
+          </div>
+          <div class="step reveal" data-delay="2">
+            <div class="step-dot"></div>
+            <div class="step-content">
+              <div class="step-number">03</div>
+              <div class="step-icon-wrapper">
+                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+              </div>
+              <h3>Meals Are Shared</h3>
+              <p>
+                Food reaches shelters, outreach vans, and street teams within the hour.
+                No one eats alone — every delivery comes with a friendly face.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Impact Section -->
+  <section class="section impact" id="impact">
+    <div class="container">
+      <div class="section-header light reveal">
+        <span class="section-label">Our Impact</span>
+        <h2>Every Meal Tells a Story</h2>
+        <p>Real numbers, real change, real kindness</p>
+      </div>
+      <div class="impact-grid">
+        <div class="impact-card reveal" data-delay="0">
+          <div class="impact-ring">
+            <svg viewBox="0 0 120 120">
+              <circle cx="60" cy="60" r="54" stroke="rgba(255,255,255,0.08)" stroke-width="3" fill="none"/>
+              <circle cx="60" cy="60" r="54" stroke="#E8734A" stroke-width="3" fill="none"
+                stroke-dasharray="339.3" stroke-dashoffset="339.3" stroke-linecap="round"
+                class="ring-progress" data-progress="0.92"/>
+            </svg>
+            <div class="ring-icon">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#E8734A" stroke-width="1.5"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg>
+            </div>
+          </div>
+          <div class="impact-number" data-target="52000">0</div>
+          <div class="impact-label">Meals Delivered</div>
+          <p>Hot, nutritious meals shared with people who needed them most</p>
+        </div>
+        <div class="impact-card reveal" data-delay="1">
+          <div class="impact-ring">
+            <svg viewBox="0 0 120 120">
+              <circle cx="60" cy="60" r="54" stroke="rgba(255,255,255,0.08)" stroke-width="3" fill="none"/>
+              <circle cx="60" cy="60" r="54" stroke="#6B9080" stroke-width="3" fill="none"
+                stroke-dasharray="339.3" stroke-dashoffset="339.3" stroke-linecap="round"
+                class="ring-progress" data-progress="0.78"/>
+            </svg>
+            <div class="ring-icon">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#6B9080" stroke-width="1.5"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+            </div>
+          </div>
+          <div class="impact-number" data-target="23">0</div>
+          <div class="impact-label">Tonnes of Food Saved</div>
+          <p>Perfectly good food diverted from landfill</p>
+        </div>
+        <div class="impact-card reveal" data-delay="2">
+          <div class="impact-ring">
+            <svg viewBox="0 0 120 120">
+              <circle cx="60" cy="60" r="54" stroke="rgba(255,255,255,0.08)" stroke-width="3" fill="none"/>
+              <circle cx="60" cy="60" r="54" stroke="#F2A93B" stroke-width="3" fill="none"
+                stroke-dasharray="339.3" stroke-dashoffset="339.3" stroke-linecap="round"
+                class="ring-progress" data-progress="0.85"/>
+            </svg>
+            <div class="ring-icon">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#F2A93B" stroke-width="1.5"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            </div>
+          </div>
+          <div class="impact-number" data-target="430">0</div>
+          <div class="impact-label">Active Volunteers</div>
+          <p>Everyday heroes giving their time each week</p>
+        </div>
+        <div class="impact-card reveal" data-delay="3">
+          <div class="impact-ring">
+            <svg viewBox="0 0 120 120">
+              <circle cx="60" cy="60" r="54" stroke="rgba(255,255,255,0.08)" stroke-width="3" fill="none"/>
+              <circle cx="60" cy="60" r="54" stroke="#7EACC1" stroke-width="3" fill="none"
+                stroke-dasharray="339.3" stroke-dashoffset="339.3" stroke-linecap="round"
+                class="ring-progress" data-progress="0.65"/>
+            </svg>
+            <div class="ring-icon">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#7EACC1" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+            </div>
+          </div>
+          <div class="impact-number" data-target="38">0</div>
+          <div class="impact-label">Tonnes CO&#8322; Prevented</div>
+          <p>Reducing food waste means a healthier planet too</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="section testimonials">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-label">Voices</span>
+        <h2>Stories of Kindness</h2>
+      </div>
+      <div class="testimonial-carousel" id="testimonialCarousel">
+        <div class="testimonial-track">
+          <div class="testimonial-card reveal" data-delay="0">
+            <div class="testimonial-quote-icon">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor" opacity="0.15"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/></svg>
+            </div>
+            <p>
+              We used to throw away 30 meals a night and it broke my heart. Now those
+              meals go to people who actually need them. It's changed how my whole
+              team thinks about food.
+            </p>
+            <div class="testimonial-author">
+              <div class="author-avatar" style="--avatar-bg: #E8734A;">MR</div>
+              <div>
+                <strong>Maria Rodriguez</strong>
+                <span>Head Chef, The Corner Bistro</span>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-card featured reveal" data-delay="1">
+            <div class="testimonial-quote-icon">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor" opacity="0.2"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/></svg>
+            </div>
+            <p>
+              The first time a volunteer handed me a warm meal and just sat down to
+              talk — no judgement, no rush — I felt like a person again. That's
+              what No Stranger To Kindness really means.
+            </p>
+            <div class="testimonial-author">
+              <div class="author-avatar" style="--avatar-bg: #6B9080;">JT</div>
+              <div>
+                <strong>James T.</strong>
+                <span>Community Member</span>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-card reveal" data-delay="2">
+            <div class="testimonial-quote-icon">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor" opacity="0.15"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/></svg>
+            </div>
+            <p>
+              I volunteer two evenings a week. It's just a small thing, but the
+              gratitude you see — it fills you up. I get more out of it than I give.
+            </p>
+            <div class="testimonial-author">
+              <div class="author-avatar" style="--avatar-bg: #F2A93B;">SP</div>
+              <div>
+                <strong>Sarah P.</strong>
+                <span>Volunteer, 2 years</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery Section -->
+  <section class="section gallery" id="gallery">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-label">Gallery</span>
+        <h2>Kindness in Action</h2>
+        <p>Moments captured from our daily operations across the UK</p>
+      </div>
+      <div class="gallery-masonry">
+        <div class="gallery-item gi-tall reveal" data-delay="0">
+          <div class="gallery-placeholder" style="--gh: 25; --gs: 60%; --gl: 75%;">
+            <div class="gallery-overlay">
+              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+              <span>Volunteers gathering before an evening run</span>
+            </div>
+          </div>
+        </div>
+        <div class="gallery-item reveal" data-delay="1">
+          <div class="gallery-placeholder" style="--gh: 35; --gs: 55%; --gl: 70%;">
+            <div class="gallery-overlay">
+              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/></svg>
+              <span>Fresh meals ready for delivery</span>
+            </div>
+          </div>
+        </div>
+        <div class="gallery-item reveal" data-delay="2">
+          <div class="gallery-placeholder" style="--gh: 140; --gs: 50%; --gl: 72%;">
+            <div class="gallery-overlay">
+              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+              <span>Food safety and quality checks</span>
+            </div>
+          </div>
+        </div>
+        <div class="gallery-item gi-wide reveal" data-delay="3">
+          <div class="gallery-placeholder" style="--gh: 200; --gs: 45%; --gl: 68%;">
+            <div class="gallery-overlay">
+              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+              <span>Partner restaurant kitchen handoff</span>
+            </div>
+          </div>
+        </div>
+        <div class="gallery-item gi-tall reveal" data-delay="4">
+          <div class="gallery-placeholder" style="--gh: 340; --gs: 40%; --gl: 65%;">
+            <div class="gallery-overlay">
+              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+              <span>Sharing meals at the community centre</span>
+            </div>
+          </div>
+        </div>
+        <div class="gallery-item reveal" data-delay="5">
+          <div class="gallery-placeholder" style="--gh: 55; --gs: 65%; --gl: 78%;">
+            <div class="gallery-overlay">
+              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg>
+              <span>A moment of connection</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Partners -->
+  <section class="section partners" id="partners">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-label">Our Partners</span>
+        <h2>Restaurants & Cafes Making a Difference</h2>
+        <p>From neighbourhood coffee shops to fine dining — kindness has no cuisine</p>
+      </div>
+      <div class="partner-marquee">
+        <div class="marquee-track">
+          <div class="partner-logo reveal">The Corner Bistro</div>
+          <div class="partner-logo reveal">Bean & Gone</div>
+          <div class="partner-logo reveal">Sunrise Bakery</div>
+          <div class="partner-logo reveal">Olive & Thyme</div>
+          <div class="partner-logo reveal">The Warming Pot</div>
+          <div class="partner-logo reveal">Street Kitchen Co.</div>
+          <div class="partner-logo reveal">Daily Bread</div>
+          <div class="partner-logo reveal">Harbour Grill</div>
+          <div class="partner-logo reveal">Petal & Vine</div>
+          <div class="partner-logo reveal">The Good Plate</div>
+        </div>
+      </div>
+      <div class="partner-cta reveal">
+        <p>Own a restaurant or cafe? Join us in the fight against food waste and hunger.</p>
+        <a href="#volunteer" class="btn btn-secondary">Become a Partner</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Get Involved / Volunteer -->
+  <section class="section volunteer" id="volunteer">
+    <div class="container">
+      <div class="volunteer-grid">
+        <div class="volunteer-info reveal">
+          <span class="section-label">Get Involved</span>
+          <h2>Be Part of<br>the Kindness</h2>
+          <p>
+            Whether you have an hour a week or a kitchen full of surplus — there's
+            a place for you in our community.
+          </p>
+          <div class="involve-options">
+            <div class="involve-option">
+              <div class="involve-icon-wrapper">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>
+              </div>
+              <div>
+                <h4>Volunteer</h4>
+                <p>Collect and deliver meals in your neighbourhood</p>
+              </div>
+            </div>
+            <div class="involve-option">
+              <div class="involve-icon-wrapper">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/></svg>
+              </div>
+              <div>
+                <h4>Partner Your Venue</h4>
+                <p>Register your restaurant or cafe to donate surplus food</p>
+              </div>
+            </div>
+            <div class="involve-option">
+              <div class="involve-icon-wrapper">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+              </div>
+              <div>
+                <h4>Corporate Sponsor</h4>
+                <p>Fund routes, equipment, or sponsor a city expansion</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="volunteer-form-wrapper reveal" data-delay="1">
+          <form class="volunteer-form" id="volunteerForm">
+            <h3>Sign Up Today</h3>
+            <div class="form-group">
+              <input type="text" placeholder="Your Name" required>
+              <div class="input-focus-line"></div>
+            </div>
+            <div class="form-group">
+              <input type="email" placeholder="Email Address" required>
+              <div class="input-focus-line"></div>
+            </div>
+            <div class="form-group">
+              <input type="tel" placeholder="Phone (optional)">
+              <div class="input-focus-line"></div>
+            </div>
+            <div class="form-group">
+              <select required>
+                <option value="" disabled selected>I'd like to...</option>
+                <option>Volunteer my time</option>
+                <option>Partner my restaurant/cafe</option>
+                <option>Become a corporate sponsor</option>
+                <option>Just learn more</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <textarea placeholder="Tell us a little about yourself..." rows="3"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary btn-full btn-glow">
+              <span>Join the Movement</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Donate Section -->
+  <section class="section donate" id="donate">
+    <div class="container">
+      <div class="donate-wrapper">
+        <div class="donate-visual reveal">
+          <div class="donate-heart-anim">
+            <svg viewBox="0 0 200 200" class="heart-svg">
+              <defs>
+                <linearGradient id="heartGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" style="stop-color:#F2A93B"/>
+                  <stop offset="100%" style="stop-color:#E8734A"/>
+                </linearGradient>
+              </defs>
+              <path class="heart-path" d="M100 170 C100 170 30 120 30 75 C30 50 50 30 75 30 C88 30 97 38 100 45 C103 38 112 30 125 30 C150 30 170 50 170 75 C170 120 100 170 100 170Z"
+                fill="url(#heartGrad)" opacity="0.9"/>
+              <path class="heart-pulse" d="M100 170 C100 170 30 120 30 75 C30 50 50 30 75 30 C88 30 97 38 100 45 C103 38 112 30 125 30 C150 30 170 50 170 75 C170 120 100 170 100 170Z"
+                fill="none" stroke="white" stroke-width="2" opacity="0.3"/>
+            </svg>
+            <div class="heart-ring ring-1"></div>
+            <div class="heart-ring ring-2"></div>
+            <div class="heart-ring ring-3"></div>
+          </div>
+          <h3>Every pound<br>feeds kindness</h3>
+        </div>
+        <div class="donate-content reveal" data-delay="1">
+          <span class="section-label">Donate</span>
+          <h2>A Little Goes a Long Way</h2>
+          <p>
+            Every pound helps us rescue more meals, reach more people, and expand to
+            more cities. 100% of donations go directly to operations.
+          </p>
+          <div class="donate-amounts">
+            <button class="amount-btn" data-amount="5">&pound;5<span>1 meal</span></button>
+            <button class="amount-btn active" data-amount="20">&pound;20<span>4 meals</span></button>
+            <button class="amount-btn" data-amount="50">&pound;50<span>10 meals</span></button>
+            <button class="amount-btn" data-amount="100">&pound;100<span>A full route</span></button>
+          </div>
+          <div class="donate-custom">
+            <label for="customAmount">Or enter a custom amount:</label>
+            <div class="custom-input-wrapper">
+              <span class="currency">&pound;</span>
+              <input type="number" id="customAmount" placeholder="0.00" min="1">
+            </div>
+          </div>
+          <button class="btn btn-donate btn-lg btn-glow">
+            <span>Donate Now</span>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+          </button>
+          <p class="donate-note">Secure payment &bull; Tax-deductible &bull; Cancel anytime</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="#" class="logo">
+            <svg class="logo-svg" width="36" height="36" viewBox="0 0 100 100" fill="none">
+              <circle cx="50" cy="50" r="46" stroke="#E8734A" stroke-width="3" fill="none" opacity="0.3"/>
+              <path d="M50 72 C50 72 28 56 28 42 C28 34 34 28 42 28 C46 28 49 30 50 33 C51 30 54 28 58 28 C66 28 72 34 72 42 C72 56 50 72 50 72Z" fill="#E8734A"/>
+              <path d="M32 78 Q50 86 68 78" stroke="#F2A93B" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+            </svg>
+            <span class="logo-text">No <em>Stranger</em> To Kindness</span>
+          </a>
+          <p>
+            Rescuing surplus food from restaurants and cafes to feed people
+            experiencing homelessness — with dignity and care.
+          </p>
+          <div class="social-links">
+            <a href="#" aria-label="Instagram">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+            </a>
+            <a href="#" aria-label="Twitter">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"/></svg>
+            </a>
+            <a href="#" aria-label="Facebook">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+            </a>
+            <a href="#" aria-label="LinkedIn">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+            </a>
+          </div>
+        </div>
+        <div class="footer-links">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#how-it-works">How It Works</a></li>
+            <li><a href="#impact">Our Impact</a></li>
+            <li><a href="#volunteer">Get Involved</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h4>Resources</h4>
+          <ul>
+            <li><a href="#">Annual Report</a></li>
+            <li><a href="#">Food Safety Policy</a></li>
+            <li><a href="#">Press Kit</a></li>
+            <li><a href="#">FAQs</a></li>
+          </ul>
+        </div>
+        <div class="footer-contact">
+          <h4>Contact</h4>
+          <p>hello@nostrangertokindness.co.uk</p>
+          <p>+44 (0) 20 7946 0958</p>
+          <p>London, United Kingdom</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 No Stranger To Kindness. Registered Charity No. 1234567.</p>
+        <div class="footer-legal">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms</a>
+          <a href="#">Cookie Preferences</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
